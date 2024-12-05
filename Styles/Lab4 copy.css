@@ -1,0 +1,383 @@
+body {
+  background-color: #9E0404; /* Replace with your desired color */
+  margin: 0; /* Remove default margin for consistent spacing */
+  padding: 0; /* Remove default padding */
+  font-family: "industry-inc-stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* General Section Styling */
+.container {
+  margin: 3rem auto;
+  max-width: 75rem;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+/* Section Header Content */
+.header-container {
+  background-color: #DDDDDD;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.option-container {
+  text-align: center;
+  background-color: #EEEEEE;
+  padding: 3rem 1rem;
+}
+
+/* Hero Banner */
+.hero-container {
+  background-color: #403d58;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F2D202;
+  text-align: center;
+  font-family: "industry-inc-stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.hero-countdown {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #F2D202;
+  font-family: "industry-inc-stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for better visibility */
+}
+
+
+@media (max-width: 1024px) {
+  .hero-container {
+    height: auto;
+    max-height: 100vw;
+  }
+
+  .hero-banner {
+    max-height: 100vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+}
+
+/* Content Section */
+.content-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #4d5ccc;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid #F2D202; /* Replace #4d5ccc with your desired color */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  padding: 20px; /* Ensure content doesn't touch the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.content-container h2 {
+  font-family: "industry-inc-stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content-container > *:not(.content-background-image) {
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px; /* Added to control overall width */
+  width: 100%;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.7);
+  border-radius: 8px;
+  font-family: "shuttleblock", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  word-spacing: normal; /* Reset to default */
+  line-height: 1.6; /* Ensure good line spacing for readability */
+  letter-spacing: 0.5px; /* Slight adjustment for cleaner look */
+}
+
+.text-content p {
+  margin: 0 0 1rem; /* Adjust spacing between paragraphs */
+}
+
+
+.learn-button {
+  background-color: #9E0404;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.learn-button:hover {
+  background-color: #dd4242;
+}
+
+.space-shuttle {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-left: 20px; /* Added spacing between text and image */
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .space-shuttle {
+    margin-left: 0;
+  }
+
+  .learn-button {
+    margin-top: 10px;
+  }
+}
+
+
+/* Accordion Container Styles */
+.accordion-container {
+  position: relative; /* Needed for absolute positioning of the background image */
+  font-family: "lexia", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff; /* Text color for visibility over the background */
+  overflow: hidden; /* Ensures content stays within the container */
+  padding: 20px; /* Optional: Adds some space around the accordion */
+  border: 15px solid #F2D202; /* Replace #4d5ccc with your desired color */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  padding: 20px; /* Ensure content doesn't touch the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */ 
+}
+.accordion-container h2 {
+  font-family: "industry-inc-stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Background Image */
+.accordion-background {
+  position: absolute; /* Makes the image fill the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales proportionally */
+  z-index: 0; /* Places the image behind the accordion content */
+}
+
+/* Content Above the Background */
+.accordion-container > *:not(.accordion-background) {
+  position: relative; /* Places content above the background image */
+  z-index: 1;
+}
+
+/* Accordion Header Styles */
+.accordion {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for visibility */
+  color: #444; /* Text color for accordion headers */
+  cursor: pointer; /* Changes the cursor to indicate interactivity */
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: "shuttleblock", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  margin: 0; /* Space between accordions */
+}
+
+.accordion:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on hover */
+}
+
+.accordion.active {
+  background-color: rgba(255, 255, 255, 1); /* Fully opaque when active */
+}
+
+/* Accordion Arrow Icons */
+.accordion:after {
+  content: '\002B'; /* Unicode for plus sign */
+  color: #444; /* Icon color */
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212"; /* Unicode for minus sign */
+}
+
+/* Accordion Panel Styles */
+.panel {
+  max-height: 0; /* Hidden by default */
+  padding: 0 18px; /* Adds padding for content inside the panel */
+  background-color: rgba(255, 255, 255, 0.8); /* Matches accordion header */
+  color: #000; /* Text color inside the panel */
+  overflow: hidden; /* Prevents content from spilling out when collapsed */
+  transition: max-height 0.2s ease-out; /* Smooth transition when expanding/collapsing */
+  margin: 0;
+}
+
+.panel p {
+  margin: 1em 0; /* Spacing for paragraphs inside the panel */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .accordion-container {
+    padding: 10px; /* Reduces padding for smaller screens */
+  }
+
+  .accordion {
+    font-size: 14px; /* Smaller font size for better fit */
+    padding: 12px; /* Adjusted padding for smaller headers */
+  }
+
+  .panel {
+    padding: 0 12px; /* Reduced padding inside panels */
+  }
+}
+
+
+/* Footer */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #D6D6D6;
+  color: #333;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-links,
+.footer-map,
+.footer-copy {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #007bff;
+}
+
+.footer-copy {
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-map {
+    min-width: auto;
+    margin: 10px 0;
+  }
+}
